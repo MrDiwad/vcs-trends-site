@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>Trends - VCS</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Main page</a>
+        <a href="history.html">History</a>
+        <a href="trends.html">Trends</a>
+    </nav>
+    <h2>Modern Trends in Version Control</h2>
+    <p>Today, VCS—and Git in particular—has become the foundation for a broad ecosystem of DevOps tools and practices.</p>
+    <ol>
+        <li>Hosting Platforms (GitHub, GitLab, Bitbucket) Although Git is a command-line tool, its global adoption was accelerated by web-based platforms such as GitHub (launched in 2008), GitLab, and Bitbucket. These platforms add crucial features on top of Git:</li>
+        <ul>
+            <li>Workflows and Code Review: They introduced the Pull Request (PR) model (or Merge Request in GitLab). This is a mechanism for proposing changes: a developer submits their changes (from a branch) as a "request to merge," which allows the team to discuss, comment on specific lines of code, and conduct a formal code review before the changes are integrated into the main branch.</li>
+            <li>Social Coding: These platforms (especially GitHub) created a global community. They facilitate easy project discovery, forking (creating a personal copy of a project), submitting contributions (via PRs), and building a public portfolio. In 2023, GitHub reported over 100 million registered developers.</li>
+            <li>Integrations: These platforms integrate issue tracking, access management, and automation.</li>
+        </ul>
+        <li>Automation and Integration (CI/CD and GitOps) The Git repository has become the heart of modern automation.</li>
+        <ul>
+            <li>CI/CD (Continuous Integration / Continuous Delivery): Every code push or Pull Request can automatically trigger CI processes. Built-in tools (like GitHub Actions or GitLab CI) compile the code, run tests, and check quality. This provides immediate feedback and prevents the integration of broken code. Following a successful integration (e.g., a merge to the main branch), the CD process can automatically deploy the application to production servers.</li>
+            <li>GitOps: This is a newer approach (term coined in 2017) that extends DevOps practices. In GitOps, the Git repository becomes the single source of truth not only for application code but also for infrastructure configuration (Infrastructure as Code). Every change to the infrastructure (e.g., on a Kubernetes cluster) must be introduced via a commit and PR in Git. Automated tools (e.g., ArgoCD) monitor the repository and automatically synchronize the infrastructure's state with what is defined in Git.</li>
+        
+        </ul>
+        <li>The Role of Artificial Intelligence (AI) The latest trend is the use of AI to assist in code-related work:</li>
+        <ul>
+            <li>AI Code Review Assistants: AI tools can automatically analyze Pull Requests to find common errors, security vulnerabilities, or style issues, alleviating the burden on human reviewers.</li>
+            <li>Programming Assistants: Tools like GitHub Copilot, by integrating with the editor, suggest entire blocks of code during development, which indirectly impacts the quality and speed of commit creation.</li>
+        </ul>
+    </ol>
+</body>
+</html>
