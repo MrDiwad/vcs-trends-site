@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>History - VCS</title>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Main page</a>
+        <a href="history.html">History</a>
+        <a href="trends.html">Trends</a>
+    </nav>
+    <h2>Timeline of Key VCS Systems</h2>
+    <p>The history of version control systems represents an evolution from simple, local tools to globally distributed collaboration platforms.</p>
+    <ul>
+        <li><b>RCS (Revision Control System) (1982):</b> Created by Walter Tichy, RCS automated change tracking for individual files. It operated locally (lacking network support) and stored differences between versions (deltas) to conserve storage space.</li>
+        <li><b>CVS (Concurrent Versions System) (1986):</b> Developed by Dick Grune as a front-end for RCS, CVS introduced the client-server model. It was the first system to allow multiple developers to collaborate concurrently on entire projects over a network. It gained significant popularity in the 1990s but suffered from major drawbacks, such as the lack of atomic commits (changes could be only partially saved) and problematic branch management.</li>
+        <li><b>Subversion (SVN) (2000):</b> Created by CollabNet as a direct successor to CVS, designed to fix its flaws. SVN introduced key improvements: atomic commits (all changes were part of a single "all-or-nothing" transaction), better file renaming/moving tracking, and more efficient network operation. SVN became the dominant VCS in the mid-2000s. Critically, however, SVN remained a centralized system (CVCS)—there was a single central repository with which all users communicated.</li>
+        <li><b>Git and Mercurial (2005):</b> 2005 was a watershed year. After the commercial VCS (BitKeeper) used by the Linux kernel developers became unavailable, Linus Torvalds created Git as a new, distributed VCS (DVCS). Almost simultaneously, Matt Mackall released Mercurial, also a DVCS. Both systems fundamentally changed the development model by giving every developer a full copy of the repository. Git quickly achieved market dominance.</li>
+    </ul>
+    <h2>How Distributed VCS (DVCS) Changed the Game</h2>
+    <p>The difference between centralized (CVCS) and distributed (DVCS) version control systems is fundamental and revolutionized how teams work.</p>
+    <h4>The Centralized Model (CVCS), e.g., SVN:</h4>
+    <ul>
+        <li>A single, central repository exists on a server, holding the "official" version of the code.</li>
+        <li>Developers check out changes from this server and commit their changes directly back to it.</li>
+        <li><b>Drawbacks: </b>Requires a constant network connection to work (even for commits). The server is a single point of failure (if it goes down, work stops). Operations like branching were "heavyweight" and cumbersome, leading teams to avoid them.</li>
+    </ul>
+    <h2>The Distributed Model (DVCS), e.g., Git:</h2>
+    <ul>
+        <li>In a DVCS, every developer has a full copy (a clone) of the entire repository on their local machine, including its complete history.</li>
+        <li>There is no "master" server by definition—every clone is a complete backup. A server (e.g., on GitHub) is treated as "central" merely by convention to facilitate synchronization.</li>
+    </ul>
+    <h2>The Key Change: The Branching and Merging Model The DVCS revolution lay in its treatment of branches and code merging:</h2>
+    <ol>
+        <li>Offline Work: Developers commit changes locally to their own repository copy. This is an instantaneous, offline operation. Synchronization (push/pull) with others is a separate, subsequent step.</li>
+        <li>Cheap and Fast Branching: In Git, creating a new branch is a near-instantaneous and "cheap" operation (it consumes minimal resources).</li>
+        <li>Merging as a Core Concept: Because everyone works locally on their own branches, merging changes is a fundamental and frequent operation, one for which DVCS tools are exceptionally well-designed.</li>
+    </ol>
+    <p><b>The Result: </b>This model enabled massive parallel development and non-linear workflows. Teams could fearlessly create separate branches for every new feature, experiment, or bug fix (so-called feature branching), work on them in isolation, and then safely merge them into the main development line. This flexibility and speed became the new standard in software development.</p>
+</body>
+</html>
